@@ -76,7 +76,7 @@ export function CalendarStep({ onSelectDateTime }: CalendarStepProps) {
                 return (
                   <TimePickerItem
                     key={hour}
-                    onClick={handleSelectTime(hour)}
+                    onClick={() => handleSelectTime(hour)}
                     disabled={!availability.availableTimes.includes(hour)}
                   >
                     {String(hour).padStart(2, '0')}:00h
