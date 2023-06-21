@@ -19,6 +19,9 @@ export function buildNextAuthOptions(
         clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
         authorization: {
           params: {
+            prompt: 'consent',
+            access_type: 'offline',
+            response_type: 'code',
             scope: `${googleUrlAuth}/userinfo.email ${googleUrlAuth}/userinfo.profile ${googleUrlAuth}/calendar`,
           },
         },
